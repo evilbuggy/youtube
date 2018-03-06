@@ -1,6 +1,6 @@
 const fs = require('fs');
 const {google} = require('googleapis');
-const processVideosResponse = require('./processVideosResponse');
+const processVideosResponse = require('./../processVideosResponse');
 
 var searchVideosByQuery = function(apiKey, queryString, callBack){
     var params = {
@@ -15,7 +15,7 @@ var searchVideosByQuery = function(apiKey, queryString, callBack){
     });
     youtube.search.list(params, function(error, response){
         if(error){
-            console.log("Error: API responded with an error....");
+            console.log("Error: API responded with an error...");
             callBack(error, response);
         }else{
             console.log("API responded to the query successfully...");

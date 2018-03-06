@@ -1,7 +1,5 @@
-const fs =  require('fs');
-const {google} = require('googleapis');
-const searchVideosByQuery = require('./searchVideosByQuery');
-const searchVideosByToken =  require('./searchVideosByToken');
+const searchVideosByQuery = require('./searchVideos/searchVideosByQuery');
+const searchVideosByToken = require('./searchVideos/searchVideosByToken');
 
 module.exports.searchVideosByQuery = searchVideosByQuery;
 module.exports.searchVideosByToken = searchVideosByToken;
