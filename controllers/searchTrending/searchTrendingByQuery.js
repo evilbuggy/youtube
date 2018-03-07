@@ -4,7 +4,7 @@ const processVideosResponse = require('./../processVideosResponse');
 
 var searchTrendingByQuery = function(apiKey, region, callBack){
     var params = {
-        'maxResults' : '50',
+        'maxResults' : '10',
         'regionCode' : region,
         'chart' : 'mostPopular',
         'part' : 'snippet',

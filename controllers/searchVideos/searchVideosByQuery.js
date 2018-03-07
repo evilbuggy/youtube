@@ -4,7 +4,7 @@ const processVideosResponse = require('./../processVideosResponse');
 
 var searchVideosByQuery = function(apiKey, queryString, callBack){
     var params = {
-        'maxResults' : '50',
+        'maxResults' : '10',
         'part' : 'snippet',
         'q' : queryString,
         'type' : 'video',
