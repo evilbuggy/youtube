@@ -91,3 +91,8 @@ a{
     line-height: 50px;
     margin-right: 20px;
 }
+
+#copyrights a{
+    margin: 0px;
+    font-size: 23px;
+}

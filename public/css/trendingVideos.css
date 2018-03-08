@@ -1,0 +1,53 @@
+#form{
+    height: 100px;
+}
+
+.search{
+    width: 700px;
+    margin:auto;
+    position: relative;
+    top: 0%;
+    left: 0%;
+}
+
+.searchBox{
+    width:620px;
+    height: 50px;
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-size: 30px;
+    padding-left: 20px;
+    padding-right: 60px;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.searchBox:focus{
+    outline: none;
+}
+
+.submitIcon{
+    width: 80px;
+    background-color: white;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: absolute;
+    right: 0px;
+    top: 0%;
+    font-size: 30px;
+    height: 50px;
+    color: rgba(0,0,0,0.3);
+}
+
+.submitIcon:hover{
+    cursor: pointer;
+    color: rgba(0,0,0,0.5);
+}
+
+#label{
+    text-align: center;
+    font-size: 25px;
+    color: #F6F6F6;
+    font-family: 'Fjalla One', sans-serif;
+}

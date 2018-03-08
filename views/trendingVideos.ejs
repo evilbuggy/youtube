@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Trending Youtube Videos</title>
+        <link type="text/css" href="./../public/css/landingPage.css" rel="stylesheet" />
+        <link type="text/css" href="./../public/css/trendingVideos.css" rel="stylesheet" />
+        <link type="text/css" href="./../public/css/makeList.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:800" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    </head>
+    <body>
+        <div id="wrapper">
+            <% if(response != null && response != undefined){ %>
+                <button id="prevPage"><i class="fas fa-chevron-circle-left"></i></button>
+                <button id="nextPage"><i class="fas fa-chevron-circle-right"></i></button>
+                <span id="prevPageToken" class="hide"><%= response.prevPageToken %></span>
+                <span id="nextPageToken" class="hide"><%= response.nextPageToken %></span>
+            <%}%>
+            <span id="presentQuery" class="hide"><%= regionCode %></span>
+            <div id="header">
+                <div id="nav">
+                    <button class="btn" id="backToHome" type="button">Back to Home</button>
+                </div>
+                <% if(response == null){ %>
+                    <h1 id="heading">Trending videos</h1>
+                <%}%>
+            </div>
+            <form id="form">
+                <%if(response == null){%>
+                    <h2 id="label">Select Region:</h2>
+                <%}%>
+                <div class="search">
+                    <select class="searchBox" name="regionCode">
+                        <% for(var i = 0; i < countryCodes.length; i++){ %>
+                            <option value="<%= countryCodes[i].Code %>" class="selectOption" <% if(regionCode == countryCodes[i].Code){ %> selected="selected" <% } %> >
+                                <%= countryCodes[i].Name %>
+                            </option>
+                        <% } %>
+                    </select>
+                    <button type="submit" class="submitIcon"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+
+            <div id="videosContainer">
+                <% if(response != null && response != undefined){%>
+                    <% include partials/makeList %>
+                <%}%>
+            </div>
+
+            <div id="footer">
+                <div id="footNav">
+                    <a href="#">About Me</a>
+                    <a href="https://github.com/evilbuggy/youtube">Github Repository</a>
+                </div>
+                <div id="copyrights">
+                    Created by <a href="">EvilBuggy</a>
+                </div>
+            </div>
+
+            <script src="./../public/scripts/trendingVideos.js"></script>
+            <script src="./../public/scripts/videoList.js"></script>
+            <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+        </div>
+    </body>
+</html>

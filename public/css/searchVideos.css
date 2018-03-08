@@ -1,0 +1,42 @@
+#form{
+    height: 100px;
+}
+
+.search{
+    width: 700px;
+    margin:auto;
+    position: relative;
+    top: 0%;
+    left: 0%;
+}
+
+.searchBar{
+    width:620px;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    font-size: 30px;
+    padding-left: 20px;
+    padding-right: 60px;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.searchBar:focus{
+    outline: none;
+}
+
+.submitIcon{
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 15px;
+    top: 0%;
+    font-size: 30px;
+    height: 50px;
+    color: rgba(0,0,0,0.3);
+}
+
+.submitIcon:hover{
+    cursor: pointer;
+    color: rgba(0,0,0,0.5);
+}
