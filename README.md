@@ -1,2 +1,2 @@
 # Youtube
-Youtube search and Youtube analytics using Youtube API
+Youtube search using Youtube API
