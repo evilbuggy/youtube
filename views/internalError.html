@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Internal Error</title>
+        <link type="text/css" rel="stylesheet" href="./../public/css/internalError.css" />
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:800" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1 id="msg">Internal Error</h1>
+
+            <div id="btn-container">
+                <button id="backToHome" type="button">Back to Home</button>
+            </div>
+            <div id="footer">
+                <div id="footNav">
+                    <a href="#">About Me</a>
+                    <a href="https://github.com/evilbuggy/youtube">Github Repository</a>
+                </div>
+                <div id="copyrights">
+                    Created by <a href="">EvilBuggy</a>
+                </div>
+            </div>
+            <script src="./../public/scripts/indexScript.js"></script>
+        </div>
+        <script>
+            var backToHome = document.querySelector("#backToHome");
+
+            backToHome.addEventListener('click', function(){
+                window.location.href = "./";
+            });
+        </script>
+    </body>
+</html>
