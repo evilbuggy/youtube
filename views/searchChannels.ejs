@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Search Youtube Videos</title>
+        <title>Search Youtube Channels</title>
         <link type="text/css" href="./../public/css/landingPage.css" rel="stylesheet" />
         <link type="text/css" href="./../public/css/searchVideos.css" rel="stylesheet" />
-        <link type="text/css" href="./../public/css/makeVideoList.css" rel="stylesheet" />
-        <link type="text/css" href="./../public/css/video.css" rel="stylesheet" />
+        <link type="text/css" href="./../public/css/makeChannelList.css" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:800" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
@@ -16,7 +15,7 @@
     </head>
     <body>
         <div id="wrapper">
-            <% if(response != null && response != undefined){ %>
+            <% if(response != null && response != undefined){%>
                 <div id="prevPage"><i class="fas fa-chevron-circle-left"></i></div>
                 <div id="nextPage"><i class="fas fa-chevron-circle-right"></i></div>
                 <span id="prevPageToken" class="hide"><%= response.prevPageToken %></span>
@@ -28,7 +27,7 @@
                     <button class="btn" id="backToHome" type="button">Back to Home</button>
                 </div>
                 <% if(response == null || response == undefined){ %>
-                    <h1 id="heading">Search videos</h1>
+                    <h1 id="heading">Search Channels</h1>
                 <%}%>
             </div>
             <form id="form">
@@ -40,7 +39,7 @@
 
             <div id="videosContainer">
                 <% if(response != null && response != undefined){%>
-                    <% include partials/makeVideoList %>
+                    <% include partials/makeChannelList %>
                 <%}%>
             </div>
 
@@ -54,26 +53,12 @@
                 </div>
             </div>
             <% if (response != null && response != undefined){ %>
-                <% if(response.videoArr.length == 0){ %>
+                <% if(response.channelArr.length == 0){ %>
                     <h1 id="noResults">No Results</h1>
                 <% } %>
             <%}%>
         </div>
 
-        <% if(response != null && response != undefined){ %>
-            <% var url = "http://www.youtube.com/embed/" %>
-            <% for(var i = 0; i < response.videoArr.length; i++){ %>
-                <% var vid = "v" + i%>
-                <% var pid = "p" + i%>
-                <div class="video" id="<%= pid %>">
-                    <% var videoUrl = url + response.videoArr[i].videoId %>
-                    <div id="<%= vid %>"></div>
-                </div>
-            <% } %>
-        <%}%>
-        <button id="close"><i class="fas fa-times"></i></button>
-
-        <script src="./../public/scripts/searchVideos.js"></script>
-        <script src="./../public/scripts/video.js"></script>
+        <script src="./../public/scripts/searchChannels.js"></script>
     </body>
 </html>

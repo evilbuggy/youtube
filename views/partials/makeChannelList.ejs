@@ -1,0 +1,19 @@
+<ul id="channelList">
+    <% for(var i = 0; i < response.channelArr.length; i++){ %>
+        <% var title = response.channelArr[i].channelTitle %>
+        <% var channelId = response.channelArr[i].channelId %>
+        <% var imgSrc = response.channelArr[i].thumbnails.default.url %>
+        <% var imgHei = response.channelArr[i].thumbnails.default.height %>
+        <% var imgWid = response.channelArr[i].thumbnails.default.width %>
+        <li class="channelItem">
+            <div class="channelItemContainer">
+                <div class="imgContainer">
+                    <img src="<%= imgSrc %>" class="thumbnail" height="<%= imgHei %>" width="<%= imgWid %>"/>
+                </div>
+                <div class ="titleContainer">
+                    <h2 class="channelTitle"><%= title %></h2>
+                </div>
+            </div>
+        </li>
+    <% } %>
+</ul>

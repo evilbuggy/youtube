@@ -36,9 +36,6 @@ body{
     background: #F6F6F6;
     font-family: 'Fjalla One', sans-serif;
     outline: none;
-}
-
-.btn:hover{
     cursor: pointer;
 }
 
@@ -91,6 +88,7 @@ body{
     margin-right: 20px;
     line-height: 50px;
     transition: 0.3s
+    margin-bottom: 0px;
 }
 
 #copyrights{
@@ -109,7 +107,8 @@ body{
     min-height:100px;
     display: flex;
     justify-content: center;
-    padding-bottom: 100px;
+    padding-bottom: 90px;
+    z-index: 0;
 }
 
 .fa-chevron-circle-left, .fa-chevron-circle-right{
@@ -130,12 +129,14 @@ body{
 
 #prevPage, #nextPage{
     border: none;
-    background: transparent;
+    background: none;
     outline: none;
+    z-index: 100;
 }
 
 .fa-search{
     line-height: 50px;
+    z-index: 100;
 }
 
 

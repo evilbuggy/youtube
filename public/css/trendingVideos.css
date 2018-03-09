@@ -13,13 +13,19 @@
 .searchBox{
     width:620px;
     height: 50px;
-    border: none;
+    border: 0;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     font-size: 30px;
     padding-left: 20px;
     padding-right: 60px;
     font-family: 'Fjalla One', sans-serif;
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+}
+
+select.searchBox::-ms-expand{
+    display:none;
 }
 
 .searchBox:focus{

@@ -5,17 +5,17 @@ $(document).ready(function(){
 
     $(".submitIcon").click(function(event){
         event.preventDefault();
-        window.location.href = "./searchVideos?queryToken=&queryString=" + $(".searchBar")[0].value;
+        window.location.href = "./searchChannels?queryToken=&queryString=" + $(".searchBar")[0].value;
     });
 
-    if($("#prevPage").length !== 0){
+    if($("#prevPage") !== undefined){
         var queryTokenPrev = $("#prevPageToken")[0].innerHTML;
         if(queryTokenPrev !== ""){
             $("#prevPage").css("color", "white");
             $("#prevPage").css("cursor", "pointer");
             $("#prevPage").click(function(event){
                 event.preventDefault();
-                window.location.href = "./searchVideos?queryToken=" +  queryTokenPrev + "&queryString=" + $("#presentQuery")[0].innerHTML;
+                window.location.href = "./searchChannels?queryToken=" +  queryTokenPrev + "&queryString=" + $("#presentQuery")[0].innerHTML;
             });
             $("#prevPage").mouseenter(function(){
                 $("#prevPage").css("color", "rgba(255,255,255,0.5)");
@@ -28,13 +28,13 @@ $(document).ready(function(){
         }
     }
 
-    if($("#nextPage").length !== 0){
+    if($("#nextPage") !== undefined){
         var queryTokenNext = $("#nextPageToken")[0].innerHTML;
         if(queryTokenNext !== ""){
             $("#nextPage").css({"color":"white", "cursor":"pointer"});
             $("#nextPage").click(function(event){
                 event.preventDefault();
-                window.location.href = "./searchVideos?queryToken=" +  queryTokenNext + "&queryString=" + $("#presentQuery")[0].innerHTML;
+                window.location.href = "./searchChannels?queryToken=" +  queryTokenNext + "&queryString=" + $("#presentQuery")[0].innerHTML;
             });
             $("#nextPage").mouseenter(function(){
                 $("#nextPage").css("color", "rgba(255,255,255,0.5)");

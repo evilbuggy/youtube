@@ -93,14 +93,6 @@ var closeVideo = function(){
     }
 }
 
-closeBtn.addEventListener('mouseenter', function(){
-    closeBtn.style.cursor = "pointer";
-});
-
-closeBtn.addEventListener('mouseleave', function(){
-    closeBtn.style.cursor = "default";
-});
-
 closeBtn.addEventListener('click', closeVideo);
 
 for(var i = 0; i < numOfVids; i++){
