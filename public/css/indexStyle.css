@@ -54,9 +54,6 @@ body {
     background: #F6F6F6;
     font-family: 'Fjalla One', sans-serif;
     outline: none;
-}
-
-.btn:hover{
     cursor: pointer;
 }
 
@@ -95,4 +92,46 @@ a{
 #copyrights a{
     margin: 0px;
     font-size: 23px;
+}
+
+
+@media only screen and (max-width: 1280px) {
+    #heading{
+        font-size: 65px;
+    }
+    .btn{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    #footer{
+        height : 35px;
+    }
+    a{
+        line-height : 35px;
+    }
+    #copyrights a{
+        font-size: 18px;
+    }
+    #copyrights{
+        line-height: 35px;
+    }
+    #caption{
+        font-size: 18px;
+    }
+}
+
+
+@media only screen and (max-height: 800px){
+    #header{
+        padding-top : 250px;
+    }
+}
+
+
+@media only screen and (max-height: 700px){
+    #header{
+        padding-top : 160px;
+    }
 }
