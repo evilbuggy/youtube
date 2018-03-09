@@ -1,0 +1,19 @@
+<ul id="videoList">
+    <% for(var i = 0; i < response.videoArr.length; i++){ %>
+        <% var title = response.videoArr[i].title %>
+        <% var videoId = response.videoArr[i].videoId %>
+        <% var channelId = response.videoArr[i].channelId %>
+        <% var channelTitle = response.videoArr[i].channelTitle %>
+        <% var imgSrc = response.videoArr[i].thumbnails.medium.url %>
+        <% var modifiedVid = "v" + videoId %>
+        <li class="videoItem">
+            <div class="videoItemContainer">
+                <img src="<%= imgSrc %>" class="thumbnail <%= modifiedVid %>"/>
+                <div class="titleContainer">
+                    <h2 class="videoTitle <%= modifiedVid %>"><%= title %></h2>
+                    <h3 class="channelTitle">By <span class="channelLink" id="<%= "c" + channelId %>"><%= channelTitle %></span></h3>
+                </div>
+            </div>
+        </li>
+    <% } %>
+</ul>

@@ -1,6 +1,6 @@
 var processVideo = function(videoItem){
     return {
-        videoId : videoItem.id.videoId,
+        videoId : videoItem.id.videoId || videoItem.id,
         title : videoItem.snippet.title,
         channelTitle : videoItem.snippet.channelTitle,
         channelId : videoItem.snippet.channelId,

@@ -1,0 +1,35 @@
+.video{
+    display: block;
+    position: fixed;
+    top:-200%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s;
+}
+
+#close {
+    display: none;
+    position:fixed;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    top: 1%;
+    left : 1%;
+}
+
+.fa-times {
+    color: white;
+    font-size: 50px;
+}
+
+.blur-filter {
+    -webkit-filter: blur(4px);
+    -moz-filter: blur(4px);
+    -o-filter: blur(4px);
+    -ms-filter: blur(4px);
+    filter: blur(4px);
+}
+
+#container {
+    transition: 1s;
+}

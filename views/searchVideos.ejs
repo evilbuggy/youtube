@@ -5,6 +5,7 @@
         <link type="text/css" href="./../public/css/landingPage.css" rel="stylesheet" />
         <link type="text/css" href="./../public/css/searchVideos.css" rel="stylesheet" />
         <link type="text/css" href="./../public/css/makeList.css" rel="stylesheet" />
+        <link type="text/css" href="./../public/css/video.css" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:800" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
@@ -49,10 +50,22 @@
                     Created by <a href="">EvilBuggy</a>
                 </div>
             </div>
-
-            <script src="./../public/scripts/searchVideos.js"></script>
-            <script src="./../public/scripts/videoList.js"></script>
-            <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
         </div>
+        <% if(response != null && response != undefined){ %>
+            <% var url = "http://www.youtube.com/embed/" %>
+            <% for(var i = 0; i < response.videoArr.length; i++){ %>
+                <% var vid = "v" + i%>
+                <% var pid = "p" + i%>
+                <div class="video" id="<%= pid %>">
+                    <% var videoUrl = url + response.videoArr[i].videoId %>
+                    <div id="<%= vid %>"></div>
+                </div>
+            <% } %>
+        <%}%>
+        <button id="close"><i class="fas fa-times"></i></button>
+        <script src="./../public/scripts/searchVideos.js"></script>
+        <script src="./../public/scripts/videoList.js"></script>
+        <script src="./../public/scripts/video.js"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     </body>
 </html>

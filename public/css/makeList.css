@@ -1,0 +1,44 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#videoList{
+    list-style-type: none;
+    width: 1000px;
+}
+
+.videoItem{
+    margin: 10px;
+    height: 180px;
+    border: 2px solid #f6f6f6;
+    border-radius:5px;
+    padding: 5px;
+}
+
+.videoItemContainer{
+    display: flex;
+}
+
+.titleContainer{
+    margin-left: 15px;
+}
+
+.videoTitle{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 22px;
+    line-height: 30px;
+    margin-top: 10px;
+    color: #f6f6f6;
+}
+
+.channelTitle{
+    font-family: 'Source Serif Pro', serif;
+    font-size: 15px;
+    line-height: 35px;
+    color: rgba(255,255,255,0.5);
+}
+
+.channelLink{
+    color: white;
+}
