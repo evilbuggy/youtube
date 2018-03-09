@@ -50,7 +50,13 @@
                     Created by <a href="">EvilBuggy</a>
                 </div>
             </div>
+            <% if (response != null && response != undefined){ %>
+                <% if(response.videoArr.length == 0){ %>
+                    <h1 id="noResults">No Results</h1>
+                <% } %>
+            <%}%>
         </div>
+
         <% if(response != null && response != undefined){ %>
             <% var url = "http://www.youtube.com/embed/" %>
             <% for(var i = 0; i < response.videoArr.length; i++){ %>
