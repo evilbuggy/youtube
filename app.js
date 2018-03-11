@@ -183,4 +183,4 @@ app.get('*', function(request, response){
     response.sendFile(__dirname + "/views/404.html");
 });
 
-app.listen(8000, "192.168.31.209");
+app.listen(process.env.PORT || 3000);
