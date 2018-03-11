@@ -18,13 +18,13 @@ $(document).ready(function(){
                 window.location.href = "./searchVideos?queryToken=" +  queryTokenPrev + "&queryString=" + $("#presentQuery")[0].innerHTML;
             });
             $("#prevPage").mouseenter(function(){
-                $("#prevPage").css("color", "rgba(255,255,255,0.5)");
+                $("#prevPage").css("color", "rgba(255,255,255,0.7)");
             });
             $("#prevPage").mouseleave(function(){
                 $("#prevPage").css("color", "white");
             });
         }else{
-            $("#prevPage").css("color", "rgba(255,255,255,0.5)");
+            $("#prevPage").css("color", "rgba(255,255,255,0.7)");
         }
     }
 
@@ -37,13 +37,13 @@ $(document).ready(function(){
                 window.location.href = "./searchVideos?queryToken=" +  queryTokenNext + "&queryString=" + $("#presentQuery")[0].innerHTML;
             });
             $("#nextPage").mouseenter(function(){
-                $("#nextPage").css("color", "rgba(255,255,255,0.5)");
+                $("#nextPage").css("color", "rgba(255,255,255,0.7)");
             });
             $("#nextPage").mouseleave(function(){
                 $("#nextPage").css("color", "white");
             });
         }else{
-            $("#nextPage").css("color", "rgba(255,255,255,0.5)");
+            $("#nextPage").css("color", "rgba(255,255,255,0.7)");
         }
     }
 });

@@ -2,17 +2,21 @@
 <html>
     <head>
         <title>Search Youtube Videos</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <link type="text/css" href="./../public/css/landingPage.css" rel="stylesheet" />
         <link type="text/css" href="./../public/css/searchVideos.css" rel="stylesheet" />
         <link type="text/css" href="./../public/css/makeVideoList.css" rel="stylesheet" />
         <link type="text/css" href="./../public/css/video.css" rel="stylesheet" />
+        <link type="text/css" href="./../public/css/responsiveness.css" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:800" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
     </head>
     <body>
         <div id="wrapper">
@@ -70,9 +74,10 @@
                     <div id="<%= vid %>"></div>
                 </div>
             <% } %>
+            <button id="close"><i class="fas fa-times"></i></button>
         <%}%>
-        <button id="close"><i class="fas fa-times"></i></button>
 
+        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
         <script src="./../public/scripts/searchVideos.js"></script>
         <script src="./../public/scripts/video.js"></script>
     </body>

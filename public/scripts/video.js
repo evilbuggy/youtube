@@ -13,6 +13,22 @@ var numOfVids =  imgList.length;
 
 var open = false, curPlayer = null, parNode = null;
 var ready = false, num = 0;
+var vidHei, vidWid;
+
+var computeSize = function(){
+    var winHei = $(window).height();
+    var winWid = $(window).width();
+    if(winHei > 850 && winWid > 1350){
+        vidHei = 780;
+        vidWid = 1280;
+    }else if(winWid > 900){
+        vidHei = 480;
+        vidWid = 858;
+    }else{
+        vidHei = 360;
+        vidWid = 640;
+    }
+}
 
 var incrementNum = function(){
     num += 1;
@@ -54,11 +70,13 @@ for(var i = 0; i < numOfVids; i++){
 
 var players = [];
 
+computeSize();
+
 var onYouTubeIframeAPIReady = function(){
     for(var i = 0; i < numOfVids; i++){
         var player = new YT.Player("v" + i, {
-            height: '780',
-            width:'1280',
+            height: vidHei,
+            width:vidWid,
             videoId: imgList[i].classList[1].substr(1),
             events: {
                 'onReady': incrementNum,

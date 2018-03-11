@@ -1,0 +1,50 @@
+@media only screen and (max-height: 800px){
+    #heading{
+        margin-top : 170px;
+    }
+}
+
+
+@media only screen and (max-height: 700px){
+    #heading{
+        margin-top : 140px;
+    }
+    #videosContainer{
+        padding-bottom: 60px;
+    }
+}
+
+@media only screen and (max-width: 1280px){
+    #heading{
+        font-size: 75px;
+        margin-top: 100px;
+    }
+    .btn{
+        font-size: 20px;
+    }
+    #videoList{
+        width: 800px;
+    }
+    .videoTitle{
+        font-size: 19px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    #footer{
+        height : 35px;
+        bottom: 0%;
+        left: 0%;
+        padding: 0px;
+    }
+    a{
+        line-height : 35px;
+    }
+    #copyrights a{
+        font-size: 18px;
+    }
+    #copyrights{
+        line-height: 35px;
+        height:35px;
+    }
+}

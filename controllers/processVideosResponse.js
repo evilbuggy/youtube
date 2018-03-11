@@ -8,11 +8,19 @@ var processVideo = function(videoItem){
     };
 };
 
+var isVideo = function(videoItem){
+    if(videoItem.kind === "youtube#video" || videoItem.id.kind === "youtube#video"){
+        return true;
+    }else {
+        return false;
+    }
+}
+
 var processVideosResponse = function(videosResponse){
     return{
         nextPageToken : videosResponse.nextPageToken,
         prevPageToken : videosResponse.prevPageToken,
-        videoArr : videosResponse.items.map(processVideo),
+        videoArr : videosResponse.items.filter(isVideo).map(processVideo),
     };
 };
 
