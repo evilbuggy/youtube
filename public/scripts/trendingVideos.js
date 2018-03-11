@@ -45,4 +45,8 @@ $(document).ready(function(){
             $("#nextPage").css("color", "rgba(255,255,255,0.5)");
         }
     }
+
+    $(".channelLink").click(function(event){
+        window.location.href = "https://www.youtube.com/channel/" + event.target.id.substr(1);
+    });
 });
