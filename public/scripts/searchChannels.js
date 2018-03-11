@@ -46,4 +46,14 @@ $(document).ready(function(){
             $("#nextPage").css("color", "rgba(255,255,255,0.7)");
         }
     }
+
+    $(".thumbnail").click(function(event){
+        var channelId = event.target.classList[1];
+        window.location.href = "https://www.youtube.com/channel/" + channelId.substr(1);
+    });
+
+    $(".channelTitle").click(function(event){
+        var channelId = event.target.classList[1];
+        window.location.href = "https://www.youtube.com/channel/" + channelId.substr(1);
+    });
 });

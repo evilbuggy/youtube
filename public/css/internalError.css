@@ -9,7 +9,7 @@ body{
 
 #msg{
     font-family: 'Montserrat', sans-serif;
-    font-size: 125px;
+    font-size: 80px;
     text-align: center;
     margin-top: 200px;
     color: white;
@@ -28,7 +28,7 @@ a{
 #btn-container{
     display: flex;
     justify-content: center;
-    margin-top: 75px;
+    margin-top: 50px;
 }
 
 #backToHome{
@@ -71,4 +71,18 @@ a{
 #copyrights a{
     margin: 0px;
     font-size: 23px;
+}
+
+@media only screen and (max-height: 800px){
+    #msg{
+        margin-top:150px;
+        font-size: 60px;
+    }
+}
+
+@media only screen and (max-height: 700px){
+    #msg{
+        margin-top:120px;
+        font-size: 50px;
+    }
 }

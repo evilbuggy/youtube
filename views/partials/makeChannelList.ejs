@@ -5,13 +5,14 @@
         <% var imgSrc = response.channelArr[i].thumbnails.default.url %>
         <% var imgHei = response.channelArr[i].thumbnails.default.height %>
         <% var imgWid = response.channelArr[i].thumbnails.default.width %>
+        <% var UpdChannelId = "c" + channelId%>
         <li class="channelItem">
             <div class="channelItemContainer">
                 <div class="imgContainer">
-                    <img src="<%= imgSrc %>" class="thumbnail" height="<%= imgHei %>" width="<%= imgWid %>"/>
+                    <img src="<%= imgSrc %>" class="thumbnail <%= UpdChannelId %>" height="<%= imgHei %>" width="<%= imgWid %>"/>
                 </div>
                 <div class ="titleContainer">
-                    <h2 class="channelTitle"><%= title %></h2>
+                    <h2 class="channelTitle <%= UpdChannelId %>"><%= title %></h2>
                 </div>
             </div>
         </li>

@@ -8,12 +8,13 @@
         <% var imgHei = response.videoArr[i].thumbnails.medium.height %>
         <% var imgWid = response.videoArr[i].thumbnails.medium.width %>
         <% var modifiedVid = "v" + videoId %>
+        <% var updChannelId = "c" + channelId %>
         <li class="videoItem">
             <div class="videoItemContainer">
                 <img src="<%= imgSrc %>" class="thumbnail <%= modifiedVid %>" height="<%= imgHei %>" width="<%= imgWid %>"/>
                 <div class="titleContainer">
                     <h2 class="videoTitle <%= modifiedVid %>"><%= title %></h2>
-                    <h3 class="channelTitle">By <span class="channelLink" id="<%= "c" + channelId %>"><%= channelTitle %></span></h3>
+                    <h3 class="channelTitle">By <span class="channelLink" id="<%= updChannelId %>"><%= channelTitle %></span></h3>
                 </div>
             </div>
         </li>
