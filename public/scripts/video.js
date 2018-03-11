@@ -111,7 +111,9 @@ var closeVideo = function(){
     }
 }
 
-closeBtn.addEventListener('click', closeVideo);
+if(closeBtn !== null){
+    closeBtn.addEventListener('click', closeVideo);
+}
 
 for(var i = 0; i < numOfVids; i++){
     imgList[i].addEventListener('click', openVideo);
