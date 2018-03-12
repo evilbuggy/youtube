@@ -65,6 +65,7 @@
         </div>
 
         <% if(response != null && response != undefined){ %>
+            <div id="blur" style="display:none"></div>
             <% var url = "http://www.youtube.com/embed/" %>
             <% for(var i = 0; i < response.videoArr.length; i++){ %>
                 <% var vid = "v" + i%>
@@ -80,9 +81,10 @@
                     </g>
                 </svg>
             </button>
+            <div id="loading"></div>
         <%}%>
 
-        <div id="loading"></div>
+
 
         <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
         <script src="./../public/scripts/searchVideos.js"></script>

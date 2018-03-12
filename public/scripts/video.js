@@ -39,8 +39,10 @@ var checkReady = function(){
     }
 }
 
-document.getElementById("wrapper").classList.add("blur-filter");
-checkReady();
+if(document.getElementById("blur") != undefined){
+    document.getElementById("wrapper").classList.add("blur-filter");
+    checkReady();
+}
 
 var incrementNum = function(){
     num += 1;
