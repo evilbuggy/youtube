@@ -30,6 +30,18 @@ var computeSize = function(){
     }
 }
 
+var checkReady = function(){
+    if(ready === true){
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("wrapper").classList.remove("blur-filter");
+    }else{
+        setTimeout(checkReady, 2000);
+    }
+}
+
+document.getElementById("wrapper").classList.add("blur-filter");
+checkReady();
+
 var incrementNum = function(){
     num += 1;
     if(num == numOfVids){
