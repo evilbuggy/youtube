@@ -15,3 +15,7 @@ This web app uses YouTube API to request YouTube videos and channels. The webpag
 ![Screenshot 7](https://cdn.pbrd.co/images/HbI4ZwJ.png)
 ![Screenshot 8](https://cdn.pbrd.co/images/HbI5kdP.png)
 ![Screenshot 9](https://cdn.pbrd.co/images/HbI5uPN.png)
+
+## Author
+
+[EvilBuggy](http://www.evilbuggy.com)
