@@ -179,6 +179,10 @@ app.get('/trendingVideos', function(request, resp){
     }
 });
 
+app.get('/google61da0351081e417b.html', function(req, res){
+    res.sendFile(__dirname + '/views/google61da0351081e417b.html')
+});
+
 app.get('*', function(request, response){
     response.sendFile(__dirname + "/views/404.html");
 });
