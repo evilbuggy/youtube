@@ -4,6 +4,10 @@
 
 This web app uses YouTube API to request YouTube videos and channels. The webpages are rendered dynamically using embeded javascript. Requests and responses are handled using ExpressJS (a framework of NodeJS). The web app is running live at http://youtube.evilbuggy.com 
 
+## Using the app
+
+Clone this repository into your local machine. To run this app, you need NodeJS installed in your machine. Update the apiKey.json with your google developers API key (Make sure that it uses YouTube Data API), then install required packages by running the following command `npm install` on the directory of the project using command-line or terminal. Then run the command `node app` to start the app. The app runs on `http://localhost:3000` by default. The app can be made to run on specific port by using following command `node app PORT_NUMBER`.
+
 ## Screenshots
 
 ![Screenshot 1](https://cdn.pbrd.co/images/HbI34US.png)	
