@@ -18,4 +18,4 @@ This web app uses YouTube API to request YouTube videos and channels. The webpag
 
 ## Author
 
-[EvilBuggy](http://www.evilbuggy.com)
+[EvilBuggy](http://www.evilbuggy.com) a.k.a Surya Prakash
